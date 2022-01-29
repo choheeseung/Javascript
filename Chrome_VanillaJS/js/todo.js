@@ -4,11 +4,13 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-let toDos = []
+let toDos = [];
 
 function deleteToDo(event){
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function saveToDos(){
@@ -25,7 +27,6 @@ function paintToDo(newTodo){
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
-    span.innerText = newTodo;
     toDoList.appendChild(li);
 }
 
