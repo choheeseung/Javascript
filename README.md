@@ -1,5 +1,5 @@
 
-# Chrome_Momentum
+# Chrome_VanillaJS
 노마드코더 VanillaJS로 크롬 앱 만들기
 
 --------------------------------
